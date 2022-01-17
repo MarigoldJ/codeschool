@@ -1,7 +1,12 @@
-function Home() {
-  console.log("home page");
+import Header from "../components/Header";
 
-  return <h2>Home</h2>;
+function Home() {
+  return (
+    <>
+      <Header />
+      <h2>Home</h2>
+    </>
+  );
 }
 
 export default Home;
