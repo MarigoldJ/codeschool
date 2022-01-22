@@ -1,7 +1,7 @@
-import Banner from "../components/Banner";
-import CampCard from "../components/CampCard";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Banner from "@components/Banner";
+import CampCard from "@components/CampCard";
+import Footer from "@components/Footer";
+import Header from "@components/Header";
 import { TypeCamp } from "../types/type";
 
 // 추후 실제 데이터로 변경
