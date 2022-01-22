@@ -9,6 +9,7 @@ export interface TypeCamp {
   category: string[];
 
   // 수강 정보
+  classTitle: string;
   classSkill?: string[];
   classStart: string;
   classPeriod: string;
