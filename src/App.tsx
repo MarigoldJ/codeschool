@@ -8,9 +8,9 @@ import routes from "./routes";
 function App() {
   return (
     <Routes>
+      <Route path="*" element={<NotFound />} />
       <Route path={routes.home} element={<Home />} />
       <Route path={routes.campdetail + "*"} element={<CampDetail />} />
-      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
