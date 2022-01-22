@@ -9,7 +9,7 @@ function App() {
   return (
     <Routes>
       <Route path={routes.home} element={<Home />} />
-      <Route path={routes.campdetail} element={<CampDetail />} />
+      <Route path={routes.campdetail + "*"} element={<CampDetail />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
