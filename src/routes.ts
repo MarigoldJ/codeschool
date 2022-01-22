@@ -1,6 +1,6 @@
 const routes = {
-  home: "/codeschool/",
-  campdetail: "/codeschool/detail/",
+  home: "/",
+  campdetail: "/detail/",
 };
 
 export default routes;
