@@ -1,9 +1,9 @@
-import logoImage from "../asset/images/codeschool_logo.png";
+import { logoImg } from "@asset/image";
 
 function Footer() {
   return (
     <footer>
-      <img src={logoImage} alt="로고" />
+      <img src={logoImg} alt="로고" />
       <div>
         대표: 내이름. 서울특별시 중구 한강대로 416, 서울스퀘어 15층 101호
       </div>

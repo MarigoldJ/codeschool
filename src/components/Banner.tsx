@@ -1,10 +1,10 @@
-import logoImg from "../asset/images/codeschool_banner.png";
+import { bannerImg } from "@asset/image";
 
 function Banner() {
   return (
     <div>
       <div>개발은 코드스쿨과 함께</div>
-      <img src={logoImg} alt="logo" />
+      <img src={bannerImg} alt="logo" />
     </div>
   );
 }

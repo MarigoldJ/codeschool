@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import routes from "../routes";
-import { TypeCamp } from "../types/type";
+import routes from "@utils/routes";
+import { TypeCamp } from "@utils/type";
 
 function CampCard({ camp }: { camp: TypeCamp }) {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import CampDetail from "./pages/CampDetail";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import routes from "./routes";
+import CampDetail from "@pages/CampDetail";
+import Home from "@pages/Home";
+import NotFound from "@pages/NotFound";
+import routes from "@utils/routes";
 
 function App() {
   return (
