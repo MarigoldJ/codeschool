@@ -1,5 +1,5 @@
+import routes from "@utils/routes";
 import { Link } from "react-router-dom";
-import routes from "../routes";
 import { TypeCamp } from "../types/type";
 
 function CampCard({ camp }: { camp: TypeCamp }) {
