@@ -17,6 +17,7 @@ function Banner() {
 export default Banner;
 
 // Style
+// TODO: Mobile 양식 추가
 const Container = styled.header`
   padding: 104px 16px 56px;
   box-sizing: border-box;
