@@ -24,7 +24,7 @@ function Navigation() {
   // TODO: 프로필 바로가기 링크 설정하기
   return (
     <Container isScrolled={isScrolled}>
-      <div className="header-main">
+      <div className="nav-main">
         <Link to={routes.home}>
           <img className="logo" src={logoImg} alt="로고" />
         </Link>
@@ -49,7 +49,7 @@ const Container = styled.nav<{ isScrolled: boolean }>`
       transition: 0.5s;
     `}
 
-  .header-main {
+  .nav-main {
     ${maxWidth}
     display: flex;
     justify-content: space-between;
@@ -57,7 +57,6 @@ const Container = styled.nav<{ isScrolled: boolean }>`
 
     padding: 10px;
     gap: 20px;
-    margin: 0px 20px;
   }
 
   .logo {
