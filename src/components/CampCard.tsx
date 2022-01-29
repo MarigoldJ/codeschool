@@ -3,7 +3,6 @@ import routes from "@utils/routes";
 import { TypeCamp } from "@utils/type";
 import fonts from "@styles/fonts";
 import styled from "styled-components";
-import { maxWidth } from "@styles/mixin";
 
 // TODO: Mobile 양식 추가
 function CampCard({ camp }: { camp: TypeCamp }) {
