@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-function Header() {
+function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navigation;
 
 // Style
 const Container = styled.nav<{ isScrolled: boolean }>`

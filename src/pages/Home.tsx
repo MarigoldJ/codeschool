@@ -2,7 +2,7 @@ import Banner from "@components/Banner";
 // import CampCard from "@components/CampCard";
 import CampSection from "@components/CampSection";
 import Footer from "@components/Footer";
-import Header from "@components/Header";
+import Navigation from "@components/Navigation";
 import { TypeCamp } from "@utils/type";
 import styled from "styled-components";
 
@@ -29,7 +29,7 @@ function Home() {
 
   return (
     <Container>
-      <Header />
+      <Navigation />
       <Banner />
       <CampSection title="인기 부트 캠프" camps={popularCamps} />
       <CampSection title="특가 할인 캠프" camps={saleCamps} />
