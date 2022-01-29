@@ -1,10 +1,12 @@
 import Banner from "@components/Banner";
-import CampCard from "@components/CampCard";
+// import CampCard from "@components/CampCard";
+import CampSection from "@components/CampSection";
 import Footer from "@components/Footer";
-import Header from "@components/Header";
+import Navigation from "@components/Navigation";
 import { TypeCamp } from "@utils/type";
+import styled from "styled-components";
 
-// 추후 실제 데이터로 변경
+// TODO: 추후 실제 데이터로 변경
 const sampleCamp: TypeCamp = {
   id: 0,
   isHot: true,
@@ -22,31 +24,23 @@ const sampleCamp: TypeCamp = {
 };
 
 function Home() {
+  const popularCamps = [sampleCamp, sampleCamp, sampleCamp, sampleCamp];
+  const saleCamps = [sampleCamp, sampleCamp, sampleCamp, sampleCamp];
+
   return (
-    <>
-      <Header />
+    <Container>
+      <Navigation />
       <Banner />
-      <div>
-        <div>인기 부트 캠프</div>
-        <div>
-          <CampCard camp={sampleCamp} />
-          <CampCard camp={sampleCamp} />
-          <CampCard camp={sampleCamp} />
-          <CampCard camp={sampleCamp} />
-        </div>
-      </div>
-      <div>
-        <div>특가 할인 캠프</div>
-        <div>
-          <CampCard camp={sampleCamp} />
-          <CampCard camp={sampleCamp} />
-          <CampCard camp={sampleCamp} />
-          <CampCard camp={sampleCamp} />
-        </div>
-      </div>
+      <CampSection title="인기 부트 캠프" camps={popularCamps} />
+      <CampSection title="특가 할인 캠프" camps={saleCamps} />
       <Footer />
-    </>
+    </Container>
   );
 }
 
 export default Home;
+
+// Style
+const Container = styled.div`
+  margin: 0 auto;
+`;

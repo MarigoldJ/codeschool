@@ -25,7 +25,8 @@ export default CampCard;
 // Style
 const Container = styled.div<{ bgImg: string }>`
   position: relative;
-  height: 200px;
+  height: 280px;
+  width: 200px; // TODO: Campsection에서 width가 flexible하지 못한점 수정하기
   background-image: url(${(props) => props.bgImg});
   background-size: cover;
   background-position: center;

@@ -28,14 +28,13 @@ export default Footer;
 
 // Style
 const Container = styled.footer`
-  ${maxWidth}
+  background-color: #eeeeee;
 
   .footer-main {
+    ${maxWidth}
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-    background-color: #eeeeee;
     padding: 20px;
   }
 
