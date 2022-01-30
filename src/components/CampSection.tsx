@@ -39,4 +39,8 @@ const Container = styled.section`
     justify-content: space-between;
     gap: 16px;
   }
+
+  a {
+    flex: 1;
+  }
 `;
