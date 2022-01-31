@@ -35,12 +35,14 @@ const Container = styled.section`
     padding-bottom: 8px;
   }
   .camp-section-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-  }
+    a {
+      flex: 1;
+    }
 
-  a {
-    flex: 1;
+    @media (min-width: 680px) {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
   }
 `;
