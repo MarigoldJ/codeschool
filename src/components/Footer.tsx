@@ -3,7 +3,7 @@ import { MobileContext } from "@context/MobileContext";
 import fonts from "@styles/fonts";
 import { maxWidth } from "@styles/mixin";
 import { useContext } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 function Footer() {
   const FOOTER_TEXT1 =
