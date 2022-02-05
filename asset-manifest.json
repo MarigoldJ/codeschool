@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/codeschool/static/css/main.e6c13ad2.css",
+    "main.js": "/codeschool/static/js/main.3bf66200.js",
+    "static/media/codeschool_banner.png": "/codeschool/static/media/codeschool_banner.b48dd728b7bb2d82661e.png",
+    "static/media/codeschool_logo.png": "/codeschool/static/media/codeschool_logo.d342fa0f5fde8ebd2caa.png",
+    "index.html": "/codeschool/index.html",
+    "main.e6c13ad2.css.map": "/codeschool/static/css/main.e6c13ad2.css.map",
+    "main.3bf66200.js.map": "/codeschool/static/js/main.3bf66200.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3bf66200.js"
+  ]
+}
