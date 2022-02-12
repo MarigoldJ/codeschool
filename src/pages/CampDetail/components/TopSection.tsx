@@ -6,12 +6,32 @@ import dayjs from "dayjs";
 import styled from "styled-components";
 
 import "dayjs/locale/ko";
+import { useEffect, useState } from "react";
 dayjs.locale("ko");
 
 function TopSection({ camp }: { camp: TypeCamp }) {
   const START_DATE_COMMENT = dayjs(camp.classStart).format(
     "YY.MM.DD(dd) HH:mm부터"
   );
+
+  let timer: any = null;
+  const startSeconds = dayjs(camp.classStart).diff(dayjs(), "s");
+  const [seconds, setSeconds] = useState(startSeconds);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    timer = setInterval(() => {
+      setSeconds(seconds - 1);
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+    };
+  });
+
+  const REMAINING_TIME =
+    ` ${Math.floor(seconds / (24 * 60 * 60))}일 ` +
+    `${Math.floor(seconds / (60 * 60)) % 24}시간` +
+    ` ${Math.floor(seconds / 60) % 60}분` +
+    ` ${seconds % 60}초 `;
 
   return (
     <Container camp={camp}>
@@ -54,8 +74,8 @@ function TopSection({ camp }: { camp: TypeCamp }) {
               </div>
             </aside>
             <aside className="detail-alert">
-              <div>!!</div>
-              <div>{}</div>
+              {/* <div>!!</div> */}
+              <div className="remain-time">{REMAINING_TIME}</div>
               <div>후 클래스가 마감돼요.</div>
             </aside>
           </div>
@@ -144,8 +164,21 @@ const Container = styled.div<{ camp: any }>`
   }
 
   .detail-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     margin-top: 5px;
     padding: 8px;
+
+    ${fonts.Caption}
+    white-space: pre-wrap;
+    background-color: #fff7f7;
+
+    .remain-time {
+      color: red;
+      font-size: 700;
+    }
   }
 `;
 
