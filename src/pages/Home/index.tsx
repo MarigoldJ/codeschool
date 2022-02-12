@@ -1,5 +1,4 @@
-import Banner from "@components/Banner";
-import CampSection from "@components/CampSection";
+import { CampSection, Banner } from "./components";
 import Footer from "@components/Footer";
 import Navigation from "@components/Navigation";
 import { TypeCamp } from "@utils/type";
