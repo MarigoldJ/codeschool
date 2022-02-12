@@ -1,6 +1,6 @@
 export interface TypeCamp {
   // 기본 속성
-  id: number;
+  _id: string;
 
   // 분류
   isHot: boolean;

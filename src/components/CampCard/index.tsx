@@ -7,7 +7,7 @@ import styled from "styled-components";
 // TODO: Mobile 양식 추가
 function CampCard({ camp }: { camp: TypeCamp }) {
   return (
-    <Link to={routes.campdetail + camp.id}>
+    <Link to={routes.campdetail + camp._id}>
       <Container bgImg={camp.classThumbnail}>
         <BgOpacityBlack />
         <div className="camp-main">
