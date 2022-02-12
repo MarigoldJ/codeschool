@@ -1,10 +1,12 @@
 import Banner from "@components/Banner";
-// import CampCard from "@components/CampCard";
 import CampSection from "@components/CampSection";
 import Footer from "@components/Footer";
 import Navigation from "@components/Navigation";
 import { TypeCamp } from "@utils/type";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import SERVER_URI from "@utils/server";
 
 // TODO: 추후 실제 데이터로 변경
 const sampleCamp: TypeCamp = {
@@ -24,8 +26,22 @@ const sampleCamp: TypeCamp = {
 };
 
 function Home() {
-  const popularCamps = [sampleCamp, sampleCamp, sampleCamp, sampleCamp];
-  const saleCamps = [sampleCamp, sampleCamp, sampleCamp, sampleCamp];
+  // TODO: useEffect를 통해 SERVER에서 불러온 데이터를 갱신
+  // const popularCamps = [sampleCamp, sampleCamp, sampleCamp, sampleCamp];
+  const [popularCamps, setPopularCamps] = useState([]);
+  const [saleCamps, setSaleCamps] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(SERVER_URI + "/camps/hotcamps")
+      .then((res) => setPopularCamps(res.data));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(SERVER_URI + "/camps/saledcamps")
+      .then((res) => setSaleCamps(res.data));
+  }, []);
 
   return (
     <Container>
