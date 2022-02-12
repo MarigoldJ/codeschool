@@ -50,7 +50,13 @@ function TopSection({ camp }: { camp: TypeCamp }) {
                     <div>{`${camp.classStudentCapacity}명 소수정예`}</div>
                   </div>
                 </div>
+                <button className="detail-admit">더 잘하는 개발자 되기</button>
               </div>
+            </aside>
+            <aside className="detail-alert">
+              <div>!!</div>
+              <div>{}</div>
+              <div>후 클래스가 마감돼요.</div>
             </aside>
           </div>
         </div>
@@ -86,15 +92,18 @@ const Container = styled.div<{ camp: any }>`
     margin: 0px 12px;
     max-width: 300px;
   }
+
+  /* left */
+  .detail-thumbnail {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  /* right */
   .fix {
     position: fixed;
     width: inherit;
     max-width: inherit;
-  }
-
-  .detail-thumbnail {
-    width: 100%;
-    border-radius: 6px;
   }
   .detail-floating {
     padding: 24px;
@@ -102,7 +111,6 @@ const Container = styled.div<{ camp: any }>`
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   }
-
   .detail-category {
     ${fonts.Body1}
     margin-bottom: 8px;
@@ -117,11 +125,33 @@ const Container = styled.div<{ camp: any }>`
     display: flex;
     justify-content: space-between;
   }
+  .detail-admit {
+    height: 48px;
+    width: 100%;
+    margin-top: 32px;
+    padding: 0 14px;
+
+    border: none;
+    border-radius: 4px;
+    background-color: ${colors.primary3};
+    color: white;
+    ${fonts.Body1}
+    font-weight: bold;
+
+    :hover {
+      filter: brightness(80%);
+    }
+  }
+
+  .detail-alert {
+    margin-top: 5px;
+    padding: 8px;
+  }
 `;
 
 const CategoryBox = styled.div`
   ${fonts.Caption}
-  margin:0px 4px;
+  margin-right: 4px;
   padding: 4px 6px;
 
   border-radius: 4px;
