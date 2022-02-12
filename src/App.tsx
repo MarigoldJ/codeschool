@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path={routes.home} element={<Home />} />
-        <Route path={routes.campdetail + "*"} element={<CampDetail />} />
+        <Route path={routes.campdetail + ":id"} element={<CampDetail />} />
       </Routes>
     </MobileContext.Provider>
   );
